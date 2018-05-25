@@ -1,4 +1,4 @@
-#Wed May 23 19:26:06 CST 2018
+#Thu May 24 17:08:26 CST 2018
 base.0=/Users/bang/Desktop/AppWatch/app/build/intermediates/transforms/dexMerger/debug/7
 path.0=classes.dex
 renamed.0=classes.dex

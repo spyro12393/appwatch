@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".PermissionActivity"
+            android:name=".DetailsActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,10 +28,12 @@
         <service android:name=".MonitorService" />
 
         <activity
-            android:name=".TipActivity"
+            android:name=".PermissionActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-
+        <activity
+            android:name=".TipActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
