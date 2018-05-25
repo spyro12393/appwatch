@@ -1,50 +1,35 @@
 package com.yan.appwatch;
 
 import android.app.ActivityManager;
-import android.app.AppOpsManager;
-import android.app.usage.UsageStats;
-import android.app.usage.UsageStatsManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.provider.Settings;
-import android.speech.tts.TextToSpeech;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.SortedMap;
-import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity {
 
     private PackageManager packageManager = null;
     private ListView lv;
     private CustomListAdapter adapter;
-    ArrayList<AppList> arrayList ;
+    ArrayList<AppList> arrayList;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        arrayList = new ArrayList<>();
         lv = findViewById(R.id.listView);
 
 
@@ -53,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        getApps();
+        getAppList();
         adapter = new CustomListAdapter(
                 getApplicationContext(), R.layout.list_layout, arrayList
         );
-        //lv.setAdapter(adapter);
+        lv.setAdapter(adapter);
 
     }
 
@@ -125,27 +110,31 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    private void getApps() {
-        List<ApplicationInfo> apps = getPackageManager().getInstalledApplications(0);
-        if (apps != null && !apps.isEmpty()) {
-            for (ApplicationInfo applicationInfo : apps) {
-                try {
-
-                    arrayList.add(new AppList(
-                            applicationInfo.loadIcon(packageManager),
-                            applicationInfo.loadLabel(packageManager).toString(),
-                            applicationInfo.packageName,
-                            ""
-
-                    ));
-
-                } catch (Exception e) {
-
-                }
+    private void getAppList() {
+        PackageManager pm = getPackageManager();
+        // Return a List of all packages that are installed on the device.
+        List<PackageInfo> packages = pm.getInstalledPackages(0);
+        for (PackageInfo packageInfo : packages) {
+            // 判断系统/非系统应用
+            if ((packageInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 0) // 非系统应用
+            {
+                arrayList.add(new AppList(
+                        packageInfo.applicationInfo.loadIcon(pm),
+                        packageInfo.applicationInfo.loadLabel(pm)
+                                .toString(),
+                        packageInfo.packageName,
+                        ""
+                ));
+            } else {
+                // 系统应用　　　　　　　　
             }
-        }
 
+
+
+        }
     }
 
-
 }
+
+
+

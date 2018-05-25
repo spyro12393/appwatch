@@ -1,40 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="26"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="22"
     build-mode="COLD"
     density="xxhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
+    ir-eligibility="METHOD_DELETED"
     plugin-version="3.0.1"
-    timestamp="1527225867020"
+    timestamp="1527261034293"
     token="6276266066515884320"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1460" />
+        duration="691" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="111" />
+        duration="66" />
     <task
         name="verifier"
-        duration="25" />
+        duration="2" />
 
     <artifact
         location="/Users/bang/Desktop/AppWatch/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
+    <artifact
+        location="/Users/bang/Desktop/AppWatch/app/build/outputs/apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1527225657674"
+        timestamp="1527260590694"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/bang/Desktop/AppWatch/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/bang/Desktop/AppWatch/app/build/outputs/apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="/Users/bang/Desktop/AppWatch/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
@@ -65,18 +71,27 @@
         <artifact
             location="/Users/bang/Desktop/AppWatch/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1527260942514"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/bang/Desktop/AppWatch/app/build/outputs/apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1527225867020"
+        ir-eligibility="METHOD_DELETED"
+        timestamp="1527261034293"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/bang/Desktop/AppWatch/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/bang/Desktop/AppWatch/app/build/outputs/apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
