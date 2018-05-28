@@ -50,9 +50,20 @@
         android:id="@+id/unselect_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/stop_service"
         android:layout_below="@+id/stop_service"
-        android:text="取消選擇"
-        android:onClick="unselectAll"/>
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/select_all_btn"
+        android:onClick="unselectAll"
+        android:text="取消選擇" />
+
+    <Button
+        android:id="@+id/set_whitelist_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stop_service"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/unselect_btn"
+        android:onClick="setwhitelist"
+        android:text="設定白名單" />
 
 </RelativeLayout>

@@ -10,7 +10,10 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.SortedMap;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -66,6 +69,13 @@ public class MonitorService extends Service {
             }
             if (!usageStatsMap.isEmpty()) {
                 String topPackageName = usageStatsMap.get(usageStatsMap.lastKey()).getPackageName();
+
+
+                for(Map.Entry<Integer, String> entry : AppConfig.whitelist.entrySet()) {
+                    if (entry.getValue().equals(topPackageName)) {
+                        return;
+                    }
+                }
 
                 if (getLauncherPackageName(mContext).equals(topPackageName) || "com.yan.appwatch".equals(topPackageName)) {
                     return;

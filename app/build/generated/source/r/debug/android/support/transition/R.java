@@ -97,16 +97,16 @@ public final class R {
         public static final int save_image_matrix = 0x7f08007d;
         public static final int save_non_transition_alpha = 0x7f08007e;
         public static final int save_scale_type = 0x7f08007f;
-        public static final int status_bar_latest_event_content = 0x7f0800a3;
-        public static final int text = 0x7f0800a9;
-        public static final int text2 = 0x7f0800aa;
-        public static final int time = 0x7f0800b2;
-        public static final int title = 0x7f0800b3;
-        public static final int transition_current_scene = 0x7f0800b9;
-        public static final int transition_layout_save = 0x7f0800ba;
-        public static final int transition_position = 0x7f0800bb;
-        public static final int transition_scene_layoutid_cache = 0x7f0800bc;
-        public static final int transition_transform = 0x7f0800bd;
+        public static final int status_bar_latest_event_content = 0x7f0800a4;
+        public static final int text = 0x7f0800aa;
+        public static final int text2 = 0x7f0800ab;
+        public static final int time = 0x7f0800b3;
+        public static final int title = 0x7f0800b4;
+        public static final int transition_current_scene = 0x7f0800ba;
+        public static final int transition_layout_save = 0x7f0800bb;
+        public static final int transition_position = 0x7f0800bc;
+        public static final int transition_scene_layoutid_cache = 0x7f0800bd;
+        public static final int transition_transform = 0x7f0800be;
     }
     public static final class integer {
         public static final int cancel_button_image_alpha = 0x7f090004;

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon May 28 14:16:44 CST 2018
+#Mon May 28 14:48:27 CST 2018
 2.base=/Users/bang/Desktop/AppWatch/app/build/intermediates/transforms/dexMerger/debug/16
 5.set=DEX
 0.path=classes.dex

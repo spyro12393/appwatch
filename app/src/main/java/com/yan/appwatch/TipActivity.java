@@ -14,7 +14,7 @@ public class TipActivity extends AppCompatActivity {
     }
 
     public void close (View view){
-        Intent intent = new Intent(TipActivity.this,MainActivity.class);
+        Intent intent = new Intent(TipActivity.this,DetailsActivity.class);
         startActivity(intent);
         finish();
 

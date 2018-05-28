@@ -14,8 +14,10 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView lv;
     private CustomListAdapter adapter;
     ArrayList<AppList> arrayList;
+
 
 
     @Override
@@ -40,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         arrayList.clear();
         CustomListAdapter.map.clear();
+        for(Map.Entry<Integer, String> entry : AppConfig.whitelist.entrySet()) {
+            CustomListAdapter.map.put(entry.getKey(),true);
+        }
         getAppList();
         adapter = new CustomListAdapter(
                 getApplicationContext(), R.layout.list_layout, arrayList
@@ -92,6 +98,16 @@ public class MainActivity extends AppCompatActivity {
            CustomListAdapter.map.remove(i);
         }
         adapter.notifyDataSetChanged();
+    }
+
+    public void setwhitelist(View view) {
+        AppConfig.whitelist.clear();
+        for(int i=0;i<CustomListAdapter.map.size();i++){
+            if(CustomListAdapter.map.get(i).equals(true)){
+                AppConfig.whitelist.put(i,arrayList.get(i).getPackageName());
+            }
+        }
+
     }
 
     private boolean isServiceRunning(Context context, String serviceName) {
