@@ -27,7 +27,7 @@ public class PermissionActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.submit_btn:
-                    if(Integer.valueOf(password_edt.getText().toString().trim()).equals(AppConfig.password)){
+                    if(password_edt.getText().toString().trim().equals(AppConfig.password)){
                         Intent intent = new Intent(PermissionActivity.this,MainActivity.class);
                         startActivity(intent);
                         finish();

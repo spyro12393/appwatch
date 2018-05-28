@@ -5,6 +5,6 @@ package com.yan.appwatch;
  */
 
 public class AppConfig {
-    public static int password=0000;
+    public static String password="0000";
 
 }
