@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        arrayList.clear();
+        CustomListAdapter.map.clear();
         getAppList();
         adapter = new CustomListAdapter(
                 getApplicationContext(), R.layout.list_layout, arrayList
