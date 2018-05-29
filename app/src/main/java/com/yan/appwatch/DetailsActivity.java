@@ -78,6 +78,10 @@ public class DetailsActivity extends AppCompatActivity {
 
     public void onBackPressed() {
         super.onBackPressed();
+        Intent i = new Intent(Intent.ACTION_MAIN);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.addCategory(Intent.CATEGORY_HOME);
+        startActivity(i);
     }
 
     public void control(View view) {
