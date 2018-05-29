@@ -7,23 +7,24 @@
     <CheckBox
         android:id="@+id/checkbox"
         android:layout_width="wrap_content"
-        android:layout_height="120dp"
+        android:layout_height="80dp"
         android:checked="false"
         android:textAlignment="center" />
 
     <ImageView
         android:id="@+id/imageViewProduct"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:scaleType="fitCenter"
         android:src="@mipmap/ic_launcher" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp">
 
         <TextView
             android:id="@+id/txtAppName"
