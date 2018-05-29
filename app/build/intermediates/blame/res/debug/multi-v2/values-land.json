@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/bang/Desktop/AppWatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/Users/jasonjr/Documents/appwatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/bang/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/267a5c921870325038662dff0d83ba38/res/values-land/values-land.xml",
+                    "source": "/Users/jasonjr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/aa0f67333856b82589e67207e338c60b/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                },
+                {
+                    "source": "/Users/jasonjr/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/f2c44cb0024b1db01485b7b885a4e77d/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,15 +31,39 @@
                         "endColumns": "12",
                         "endOffsets": "505"
                     }
-                },
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/yan/Documents/appwatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "map": [
                 {
-                    "source": "/Users/bang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b471b5aff32425673b802d09497f8ec7/res/values-land/values-land.xml",
+                    "source": "/Users/yan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f9db705be60c455ddb9d8b2ba6583f6b/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
                         "startOffsets": "55,125,189,260",
                         "endColumns": "69,63,70,67",
                         "endOffsets": "120,184,255,323"
+                    }
+                },
+                {
+                    "source": "/Users/yan/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/98187e83f2540970f7ceda1d2ab3c767/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "328",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "505"
                     }
                 }
             ]

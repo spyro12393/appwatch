@@ -9,18 +9,48 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="502dp"
+        android:layout_height="400dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/control_btn"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listView"
+        android:layout_centerHorizontal="true"
+        android:onClick="control"
+        android:text="登    入"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/tv_UsedTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4"
+        android:textSize="28dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="68dp"
+        android:text="今日已使用："
+        android:textSize="28dp" />
+
+    <TextView
+        android:id="@+id/isrunning_tv"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:gravity="center"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:text="控制手機"
-        android:onClick="control"/>
+        android:layout_marginTop="0dp"
+        android:textAlignment="center"
+        android:textSize="28dp" />
 
 </RelativeLayout>

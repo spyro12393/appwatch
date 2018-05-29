@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/bang/Desktop/AppWatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/Users/jasonjr/Documents/appwatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/bang/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/35afb4a12033f9abae345c059dd7a533/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/Users/bang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b471b5aff32425673b802d09497f8ec7/res/values-v16/values-v16.xml",
+                    "source": "/Users/jasonjr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/aa0f67333856b82589e67207e338c60b/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,50 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/jasonjr/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/f4d67cbc61429300134f050700fee206/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/yan/Documents/appwatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/yan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f9db705be60c455ddb9d8b2ba6583f6b/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/yan/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/548166f084bd110b3cbf3cb9f70b99a3/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

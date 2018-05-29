@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -102,12 +103,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void setwhitelist(View view) {
         AppConfig.whitelist.clear();
-        for(int i=0;i<CustomListAdapter.map.size();i++){
-            if(CustomListAdapter.map.get(i).equals(true)){
-                AppConfig.whitelist.put(i,arrayList.get(i).getPackageName());
+        if(!CustomListAdapter.map.isEmpty()){
+            for(Map.Entry<Integer, Boolean> entry : CustomListAdapter.map.entrySet()) {
+                if (entry.getValue().equals(true)) {
+                    AppConfig.whitelist.put(entry.getKey(),arrayList.get(entry.getKey()).getPackageName());
+                }
             }
         }
-
     }
 
     private boolean isServiceRunning(Context context, String serviceName) {
@@ -134,20 +136,18 @@ public class MainActivity extends AppCompatActivity {
         List<PackageInfo> packages = pm.getInstalledPackages(0);
         for (PackageInfo packageInfo : packages) {
             // 判断系统/非系统应用
-            if ((packageInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 0) // 非系统应用
-            {
-                arrayList.add(new AppList(
-                        packageInfo.applicationInfo.loadIcon(pm),
-                        packageInfo.applicationInfo.loadLabel(pm)
-                                .toString(),
-                        packageInfo.packageName,
-                        ""
-                ));
+            if ((packageInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 0){ // 非系统應用
+
             } else {
                 // 系统应用　　　　　　　　
             }
-
-
+            arrayList.add(new AppList(
+                    packageInfo.applicationInfo.loadIcon(pm),
+                    packageInfo.applicationInfo.loadLabel(pm)
+                            .toString(),
+                    packageInfo.packageName,
+                    ""
+            ));
 
         }
     }

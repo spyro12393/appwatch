@@ -22,10 +22,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="49dp"
+        android:layout_alignTop="@+id/stop_service"
+        android:layout_marginStart="79dp"
+        android:background="#FF0000"
+        android:onClick="openService"
         android:text="開啟服務"
-        android:onClick="openService"/>
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/stop_service"
@@ -33,26 +35,31 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="75dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginTop="11dp"
+        android:background="#00B41E"
+        android:onClick="closeService"
         android:text="停止服務"
-        android:onClick="closeService"/>
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/select_all_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/open_service"
-        android:layout_below="@+id/open_service"
-        android:text="全選"
-        android:onClick="selectAll"/>
+        android:layout_above="@+id/listView"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-66dp"
+        android:layout_marginStart="31dp"
+        android:onClick="selectAll"
+        android:text="全選" />
 
     <Button
         android:id="@+id/unselect_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/stop_service"
-        android:layout_marginStart="20dp"
-        android:layout_toEndOf="@+id/select_all_btn"
+        android:layout_above="@+id/listView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-66dp"
         android:onClick="unselectAll"
         android:text="取消選擇" />
 
@@ -60,9 +67,10 @@
         android:id="@+id/set_whitelist_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/stop_service"
-        android:layout_marginStart="20dp"
-        android:layout_toEndOf="@+id/unselect_btn"
+        android:layout_above="@+id/listView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-66dp"
+        android:layout_marginEnd="33dp"
         android:onClick="setwhitelist"
         android:text="設定白名單" />
 
