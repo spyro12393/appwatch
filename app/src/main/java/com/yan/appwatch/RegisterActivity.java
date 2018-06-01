@@ -46,7 +46,6 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void clickSubmit(View view) {
-
         String account = ((EditText) findViewById(R.id.txtAccount))
                 .getText().toString();
         String password = ((EditText) findViewById(R.id.txtPwd))
@@ -54,7 +53,8 @@ public class RegisterActivity extends AppCompatActivity {
         String confirmPassword = ((EditText) findViewById(R.id.txtConfirmPwd))
                 .getText().toString();
 
-        Log.d("註冊","email/pwd/confirm: " + account + "/" + password + "/" + confirmPassword);
+
+        // Log.d("註冊","email/pwd/confirm: " + account + "/" + password + "/" + confirmPassword);
         if(password.equals(confirmPassword))
         {
             createUser(account, password);
@@ -63,13 +63,13 @@ public class RegisterActivity extends AppCompatActivity {
         {
             Toast.makeText(view.getContext(), "確認密碼不同!",Toast.LENGTH_LONG).show();
         }
-
     }
 
-
     private void createUser(String email, String password) {
-        Log.d("註冊","email/pwd: " + email + "/" + password);
+        // Log.d("註冊","email/pwd: " + email + "/" + password);
 
+        final String name = ((EditText) findViewById(R.id.txtName))
+                .getText().toString();
         final Intent intent = new Intent(this, LoginActivity.class);
 
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -85,6 +85,21 @@ public class RegisterActivity extends AppCompatActivity {
                                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
+
+
+                                                FirebaseUser user = mAuth.getCurrentUser();
+                                                userUID = user.getUid();
+                                                Log.d("Saving:", " Saving to Database - " + name + user.getUid());
+
+                                                // Write a message to the database
+                                                FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+                                                DatabaseReference nameRef = database.getReference(userUID + "/Name");
+                                                nameRef.setValue(name);
+
+                                                DatabaseReference authRef = database.getReference(userUID + "/Authority");
+                                                authRef.setValue(0);
+
                                                 startActivity(intent);
                                             }
                                         })
