@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.0.1"
-    timestamp="1527846490275"
+    timestamp="1527847699744"
     token="7773108178209210041"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -24,8 +24,8 @@
         duration="0" />
 
     <artifact
-        location="/Users/jasonjr/Documents/GitHub/appwatch/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
+        location="/Users/jasonjr/Documents/GitHub/appwatch/app/build/outputs/apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
@@ -95,9 +95,6 @@
         <artifact
             location="/Users/jasonjr/Documents/GitHub/appwatch/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
-        <artifact
-            location="/Users/jasonjr/Documents/GitHub/appwatch/app/build/outputs/apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
@@ -106,6 +103,14 @@
         <artifact
             location="/Users/jasonjr/Documents/GitHub/appwatch/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1527847699744"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/jasonjr/Documents/GitHub/appwatch/app/build/outputs/apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
