@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Jun 01 11:15:12 CST 2018
+#Fri Jun 01 11:52:40 CST 2018
 2.base=/Users/jasonjr/Documents/GitHub/appwatch/app/build/intermediates/transforms/dexMerger/debug/16
 5.set=DEX
 0.path=classes.dex

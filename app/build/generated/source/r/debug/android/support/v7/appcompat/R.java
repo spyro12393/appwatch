@@ -608,10 +608,10 @@ public final class R {
         public static final int alertTitle = 0x7f08001e;
         public static final int async = 0x7f080021;
         public static final int blocking = 0x7f080025;
-        public static final int buttonPanel = 0x7f08002a;
-        public static final int cancel_action = 0x7f08002b;
-        public static final int checkbox = 0x7f080030;
-        public static final int chronometer = 0x7f080031;
+        public static final int buttonPanel = 0x7f080029;
+        public static final int cancel_action = 0x7f08002a;
+        public static final int checkbox = 0x7f08002f;
+        public static final int chronometer = 0x7f080030;
         public static final int contentPanel = 0x7f080036;
         public static final int custom = 0x7f080039;
         public static final int customPanel = 0x7f08003a;

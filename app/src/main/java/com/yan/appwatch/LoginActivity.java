@@ -86,31 +86,15 @@ public class LoginActivity extends AppCompatActivity {
                 .show();
     }
 
-    private void createUser(String email, String password) {
-        auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(
-                        new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                String message =
-                                        task.isSuccessful() ? "註冊成功" : "註冊失敗";
+    public void clickRegister(View view) {
 
-                                new AlertDialog.Builder(LoginActivity.this)
-                                        .setMessage(message)
-                                        .setPositiveButton("OK", null)
-                                        .show();
+        Intent intent = new Intent(this, RegisterActivity.class);
+        finish();
+        startActivity(intent);
 
-                                // add into database
-                                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                                DatabaseReference myRef = database.getReference("User");
-
-                                myRef.setValue(userUID);
-                            }
-                        });
     }
 
-    // clickLogin
-    public void login(View v) {
+    public void clickLogin(View view) {
         try {
             final String email = ((EditText) findViewById(R.id.email))
                     .getText().toString();
@@ -130,16 +114,7 @@ public class LoginActivity extends AppCompatActivity {
         }
         catch (Exception e)
         {
-            Toast.makeText(v.getContext(), "Cannot be empty!",Toast.LENGTH_LONG).show();
+            Toast.makeText(view.getContext(), "Cannot be empty!",Toast.LENGTH_LONG).show();
         }
-    }
-
-
-    public void clickRegister(View view) {
-
-        Intent intent = new Intent(this, RegisterActivity.class);
-        finish();
-        startActivity(intent);
-
     }
 }

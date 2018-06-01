@@ -71,7 +71,7 @@ public final class R {
         public static final int actions = 0x7f080018;
         public static final int async = 0x7f080021;
         public static final int blocking = 0x7f080025;
-        public static final int chronometer = 0x7f080031;
+        public static final int chronometer = 0x7f080030;
         public static final int forever = 0x7f080054;
         public static final int icon = 0x7f08005a;
         public static final int icon_group = 0x7f08005b;
