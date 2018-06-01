@@ -1,42 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/yan/Documents/appwatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "/Users/jasonjr/Documents/GitHub/appwatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/yan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f9db705be60c455ddb9d8b2ba6583f6b/res/values-hdpi-v4/values-hdpi-v4.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "6",
-                        "endColumns": "13",
-                        "endOffsets": "327"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/jasonjr/Documents/appwatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
-            "map": [
-                {
-                    "source": "/Users/jasonjr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/aa0f67333856b82589e67207e338c60b/res/values-hdpi-v4/values-hdpi-v4.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "6",
-                        "endColumns": "13",
-                        "endOffsets": "327"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/bang/Desktop/AppWatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
-            "map": [
-                {
-                    "source": "/Users/bang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b471b5aff32425673b802d09497f8ec7/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "/Users/jasonjr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/820fa3de61922563c67ff1b3d71c664c/res/values-hdpi-v4/values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
