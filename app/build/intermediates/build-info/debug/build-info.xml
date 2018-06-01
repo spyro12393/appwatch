@@ -5,23 +5,28 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.0.1"
-    timestamp="1527825724210"
+    timestamp="1527835500069"
     token="7773108178209210041"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="80" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="20" />
     <task
         name="verifier"
-        duration="0" />
+        duration="1" />
+
+    <artifact
+        location="/Users/jasonjr/Documents/GitHub/appwatch/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
@@ -97,16 +102,12 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_DELETED"
-        timestamp="1527825368433"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1527835500069"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/jasonjr/Documents/GitHub/appwatch/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1527825724210"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

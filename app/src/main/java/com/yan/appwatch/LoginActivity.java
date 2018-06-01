@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
         final Intent intent = new Intent(this,RegisterActivity.class);
         new AlertDialog.Builder(LoginActivity.this)
                 .setTitle("登入問題")
-                .setMessage("無此帳號，是否要以此帳號與密碼註冊?")
+                .setMessage("帳號或密碼錯誤，是否要進行註冊?")
                 .setPositiveButton("註冊",
                         new DialogInterface.OnClickListener() {
                             @Override
