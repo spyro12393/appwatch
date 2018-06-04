@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,7 +25,6 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseAuth.AuthStateListener authListener;
     private String userUID;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
     public void clickLogin(View view) {
         try {
             final String email = ((EditText) findViewById(R.id.email))
@@ -116,5 +117,13 @@ public class LoginActivity extends AppCompatActivity {
         {
             Toast.makeText(view.getContext(), "Cannot be empty!",Toast.LENGTH_LONG).show();
         }
+    }
+
+
+
+    public void clickForgetPassword(View view) {
+        Intent intent = new Intent(this, ForgotPasswordActivity.class);
+        finish();
+        startActivity(intent);
     }
 }
