@@ -159,25 +159,25 @@ MERGED from [com.google.firebase:firebase-iid-license:11.8.0] /Users/jasonjr/.gr
 	android:theme
 		ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:18:9-65
 activity#com.yan.appwatch.LoginActivity
-ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:19:9-25:20
+ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:27:9-50
 	android:name
-		ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:19:19-48
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:20:13-24:29
-action#android.intent.action.MAIN
-ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:21:17-69
-	android:name
-		ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:21:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:23:17-77
-	android:name
-		ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:23:27-74
+		ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:27:19-48
 activity#com.yan.appwatch.DetailsActivity
 ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:28:9-36:20
 	android:theme
 		ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:30:13-69
 	android:name
 		ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:29:13-44
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:31:13-35:29
+action#android.intent.action.MAIN
+ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:32:17-69
+	android:name
+		ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:32:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:34:17-77
+	android:name
+		ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:34:27-74
 service#com.yan.appwatch.MonitorService
 ADDED from /Users/jasonjr/Documents/GitHub/appwatch/app/src/main/AndroidManifest.xml:38:9-51
 	android:name
