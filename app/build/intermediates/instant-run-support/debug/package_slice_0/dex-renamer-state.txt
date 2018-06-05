@@ -1,4 +1,4 @@
-#Tue Jun 05 00:01:38 CST 2018
-base.0=/Users/jasonjr/Documents/GitHub/appwatch/app/build/intermediates/transforms/dexMerger/debug/0
+#Tue Jun 05 23:09:56 CST 2018
+base.0=/Users/bang/Desktop/appwatch/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

@@ -13,7 +13,7 @@
         android:layout_height="502dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/open_service"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="137dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="65dp" />
 
@@ -52,6 +52,17 @@
         android:layout_marginStart="31dp"
         android:onClick="selectAll"
         android:text="全選" />
+
+    <Button
+        android:id="@+id/set_use_time_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/unselect_btn"
+        android:layout_marginEnd="29dp"
+        android:layout_marginTop="69dp"
+        android:layout_toStartOf="@+id/unselect_btn"
+        android:onClick="setusetime"
+        android:text="設定可用時間" />
 
     <Button
         android:id="@+id/unselect_btn"

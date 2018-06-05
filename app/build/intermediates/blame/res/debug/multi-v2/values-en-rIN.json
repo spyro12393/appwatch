@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/jasonjr/Documents/GitHub/appwatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "/Users/bang/Desktop/appwatch/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
-                    "source": "/Users/jasonjr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/820fa3de61922563c67ff1b3d71c664c/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/Users/bang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/957892796e757b7b2f31d5a9734dd490/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

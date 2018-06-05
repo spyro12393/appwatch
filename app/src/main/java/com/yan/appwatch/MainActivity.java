@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Intent intent = getPackageManager().getLaunchIntentForPackage("com.yan.appwatch");
-        startActivity(intent);
+        //Intent intent = getPackageManager().getLaunchIntentForPackage("com.yan.appwatch");
+        //startActivity(intent);
 
     }
 
@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void closeService(View view) {
+        AppConfig.allowuseTime = 9999999999L; //設定可用時間超過一天不會自動在啟動service
         stopService(new Intent(MainActivity.this, MonitorService.class));
         Toast.makeText(this, "服務已關閉！", Toast.LENGTH_SHORT).show();
     }
@@ -152,6 +153,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void setusetime(View view) {
+        Intent intent = new Intent(MainActivity.this,SetUseTimeActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
 
 

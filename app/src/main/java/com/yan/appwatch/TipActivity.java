@@ -19,4 +19,12 @@ public class TipActivity extends AppCompatActivity {
         finish();
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(TipActivity.this,DetailsActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

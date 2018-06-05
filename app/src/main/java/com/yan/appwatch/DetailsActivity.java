@@ -35,8 +35,8 @@ public class DetailsActivity extends AppCompatActivity {
     private ListView lv;
     private TextView tv_usedTime,isrunning_tv;
     private AppListAdapter adapter;
-    private long usedTime;
-    private Date d;
+    public static long usedTime;
+    private Date date;
     private SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");//format sec to HH:mm:ss
     ArrayList<AppList> arrayList ;
     ApplicationInfo appinfo;
@@ -45,6 +45,7 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+        df.setTimeZone(TimeZone.getTimeZone("GMT+00:00"));
         isrunning_tv = findViewById(R.id.isrunning_tv);
         lv = findViewById(R.id.listView);
         tv_usedTime = findViewById(R.id.tv_UsedTime);
@@ -128,30 +129,30 @@ public class DetailsActivity extends AppCompatActivity {
         List<UsageStats> usageStatsList = mUsageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
 
         if (usageStatsList != null && !usageStatsList.isEmpty()) {
-            HashSet<String> set = new HashSet<>();
+            //HashSet<String> set = new HashSet<>();
             usedTime=0;
-            d= new Date(usedTime);
+            date= new Date(usedTime);
             for (UsageStats usageStats : usageStatsList) {
-                set.add(usageStats.getPackageName());
-                d.setTime(usageStats.getTotalTimeInForeground());
+                //set.add(usageStats.getPackageName());
+                date.setTime(usageStats.getTotalTimeInForeground());
                 try {
                     appinfo = packageManager.getApplicationInfo(usageStats.getPackageName(), 0);
                     arrayList.add(new AppList(
                             appinfo.loadIcon(packageManager),
                             appinfo.loadLabel(packageManager).toString(),
                             usageStats.getPackageName(),
-                            String.valueOf(df.format(d))
+                            String.valueOf(df.format(date))
                     ));
                     usedTime += usageStats.getTotalTimeInForeground();//加總今日使用時間
                 } catch (Exception e) {}
             }
             /**總時間*/
-            d.setTime(usedTime);
-            tv_usedTime.setText(df.format(d));
+            date.setTime(usedTime);
+            tv_usedTime.setText(df.format(date));
 
-            if (!set.isEmpty()) {
-                Log.e("size", set.size() + "");
-            }
+            //if (!set.isEmpty()) {
+            //    Log.e("size", set.size() + "");
+            //}
         }
 
     }

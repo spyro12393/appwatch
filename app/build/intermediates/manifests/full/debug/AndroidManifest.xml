@@ -30,15 +30,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        <activity android:name="com.yan.appwatch.LoginActivity" >
+
+        <!--
+        activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity
+        -->
 
-        <!-- activity android:name=".LoginActivity"/ -->
+        <activity android:name="com.yan.appwatch.LoginActivity" />
         <activity
             android:name="com.yan.appwatch.DetailsActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
@@ -50,6 +53,7 @@
         </activity>
 
         <service android:name="com.yan.appwatch.MonitorService" />
+        <service android:name="com.yan.appwatch.TimeService" />
 
         <activity
             android:name="com.yan.appwatch.PermissionActivity"
@@ -62,6 +66,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name="com.yan.appwatch.RegisterActivity" />
         <activity android:name="com.yan.appwatch.ForgotPasswordActivity" />
+        <activity android:name="com.yan.appwatch.SetUseTimeActivity" />
 
         <meta-data
             android:name="android.support.VERSION"
