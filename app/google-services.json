@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "387040702901",
+    "firebase_url": "https://appwatch-96a76.firebaseio.com",
+    "project_id": "appwatch-96a76",
+    "storage_bucket": "appwatch-96a76.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387040702901:android:b224f444198fc83f",
+        "android_client_info": {
+          "package_name": "com.yan.appwatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387040702901-et4tceophme2r2ehmtfobolc2tlkf8ed.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yan.appwatch",
+            "certificate_hash": "16e64df92006075ee7a894fcfd5f2622d4a3c24c"
+          }
+        },
+        {
+          "client_id": "387040702901-vnp187umsmocrs1b5lbuhaiek597v1cn.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "387040702901-vnp187umsmocrs1b5lbuhaiek597v1cn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnuSYyI3udJz8CV0TzRzB8w7KzYMZjQI0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387040702901-vnp187umsmocrs1b5lbuhaiek597v1cn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
