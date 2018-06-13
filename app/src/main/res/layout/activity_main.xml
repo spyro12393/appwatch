@@ -57,10 +57,9 @@
         android:id="@+id/set_use_time_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/unselect_btn"
-        android:layout_marginEnd="29dp"
-        android:layout_marginTop="69dp"
-        android:layout_toStartOf="@+id/unselect_btn"
+        android:layout_above="@+id/listView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-137dp"
         android:onClick="setusetime"
         android:text="設定可用時間" />
 

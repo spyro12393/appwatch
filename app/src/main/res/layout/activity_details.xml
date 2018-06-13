@@ -9,7 +9,7 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="330dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
@@ -27,6 +27,20 @@
         android:id="@+id/tv_UsedTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_toEndOf="@+id/textView10"
+        android:textSize="28dp" />
+    <TextView
+        android:id="@+id/tv_AvailableTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_toEndOf="@+id/textView10"
+        android:textSize="28dp" />
+    <TextView
+        android:id="@+id/tv_RestTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView4"
         android:layout_toEndOf="@+id/textView4"
         android:textSize="28dp" />
@@ -35,11 +49,29 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_below="@+id/textView11"
+        android:text="剩餘時間："
+        android:textSize="28dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView10"
+        android:layout_toStartOf="@+id/tv_UsedTime"
+        android:text="今日已使用："
+        android:textSize="28dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="12dp"
         android:layout_marginTop="68dp"
-        android:text="今日已使用："
+        android:text="今日可使用："
         android:textSize="28dp" />
 
     <TextView

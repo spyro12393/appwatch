@@ -58,11 +58,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
         //Intent intent = getPackageManager().getLaunchIntentForPackage("com.yan.appwatch");
         //startActivity(intent);
 
@@ -83,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void closeService(View view) {
-        AppConfig.allowuseTime = 9999999999L; //設定可用時間超過一天不會自動在啟動service
+        AppConfig.allowuseTime = 86400000L; //設定可用時間超過一天不會自動在啟動service
         stopService(new Intent(MainActivity.this, MonitorService.class));
         Toast.makeText(this, "服務已關閉！", Toast.LENGTH_SHORT).show();
     }

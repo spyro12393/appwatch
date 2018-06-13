@@ -31,6 +31,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        final Intent intent = new Intent(this, DetailsActivity.class);
+
         // 輸入email, password回傳userID
         auth = FirebaseAuth.getInstance();
         authListener = new FirebaseAuth.AuthStateListener() {
@@ -38,10 +40,17 @@ public class LoginActivity extends AppCompatActivity {
             public void onAuthStateChanged(
                     @NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
+
+                //auth.signOut();
+
                 if (user!=null) {
                     Log.d("onAuthStateChanged", "登入:"+ user.getUid());
                     userUID =  user.getUid();
-
+                    if (user != null)
+                    {
+                        intent.putExtra("uid", userUID);
+                        startActivity(intent);
+                    }
                 }else{
                     Log.d("onAuthStateChanged", "已登出");
                 }
@@ -78,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
                                 intent.putExtra("email", email);
                                 //intent.putExtra("password", password);
 
-                                finish();
+                                //finish();
                                 startActivity(intent);
                             }
                         })

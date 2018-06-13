@@ -11,6 +11,6 @@ public class AppConfig {
 
     public static HashMap<Integer,String> whitelist = new HashMap<>();
 
-    public static long allowuseTime;
+    public static long allowuseTime=86400000L;
 
 }

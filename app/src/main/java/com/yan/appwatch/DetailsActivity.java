@@ -33,7 +33,7 @@ import java.util.TimeZone;
 public class DetailsActivity extends AppCompatActivity {
     private PackageManager packageManager = null;
     private ListView lv;
-    private TextView tv_usedTime,isrunning_tv;
+    private TextView usedTime_tv,isrunning_tv,restTime_tv,avaiableTime_tv;
     private AppListAdapter adapter;
     public static long usedTime;
     private Date date;
@@ -48,11 +48,12 @@ public class DetailsActivity extends AppCompatActivity {
         df.setTimeZone(TimeZone.getTimeZone("GMT+00:00"));
         isrunning_tv = findViewById(R.id.isrunning_tv);
         lv = findViewById(R.id.listView);
-        tv_usedTime = findViewById(R.id.tv_UsedTime);
+        usedTime_tv = findViewById(R.id.tv_UsedTime);
+        restTime_tv = findViewById(R.id.tv_RestTime);
+        avaiableTime_tv = findViewById(R.id.tv_AvailableTime);
         arrayList = new ArrayList<>();
         packageManager = this.getPackageManager();
         openPermission();
-
     }
 
     @Override
@@ -129,11 +130,9 @@ public class DetailsActivity extends AppCompatActivity {
         List<UsageStats> usageStatsList = mUsageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
 
         if (usageStatsList != null && !usageStatsList.isEmpty()) {
-            //HashSet<String> set = new HashSet<>();
             usedTime=0;
             date= new Date(usedTime);
             for (UsageStats usageStats : usageStatsList) {
-                //set.add(usageStats.getPackageName());
                 date.setTime(usageStats.getTotalTimeInForeground());
                 try {
                     appinfo = packageManager.getApplicationInfo(usageStats.getPackageName(), 0);
@@ -148,13 +147,15 @@ public class DetailsActivity extends AppCompatActivity {
             }
             /**總時間*/
             date.setTime(usedTime);
-            tv_usedTime.setText(df.format(date));
+            usedTime_tv.setText(df.format(date));
+            /**可用時間*/
+            date.setTime(AppConfig.allowuseTime);
+            avaiableTime_tv.setText(df.format(date));
+            /**剩餘時間*/
+            date.setTime(AppConfig.allowuseTime-usedTime);
+            restTime_tv.setText(df.format(date));
 
-            //if (!set.isEmpty()) {
-            //    Log.e("size", set.size() + "");
-            //}
         }
-
     }
 
     private boolean isServiceRunning(Context context, String serviceName) {

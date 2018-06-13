@@ -13,7 +13,36 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="57dp"
-        android:text="今天可用小時:"
+        android:text="今日可使用時間："
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="205dp"
+        android:text="hour:"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textView12"
+        android:layout_marginEnd="102dp"
+        android:text="min:"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="30dp"
@@ -24,9 +53,18 @@
         android:id="@+id/hour_numberPicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView9"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="135dp" />
+
+    <NumberPicker
+        android:id="@+id/min_numberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/hour_numberPicker"
+        android:layout_marginStart="-92dp"
+        android:layout_toEndOf="@+id/textView13" />
 
     <Button
         android:id="@+id/set_time_btn"

@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatDialogFragment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
@@ -50,19 +51,32 @@ public class TimeService extends Service {
             @Override
             public void run() {
                 getTotalUseTime();
+                Log.d("fuck",String.valueOf(useTime));
+                Log.d("fucku", String.valueOf(AppConfig.allowuseTime));
                 if(useTime>=AppConfig.allowuseTime){
                     boolean isRunning = isServiceRunning(getApplicationContext(),"com.yan.appwatch.MonitorService");
                     if (isRunning) {
 
                     } else {
+                        //模拟home键点击
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.addCategory(Intent.CATEGORY_HOME);
+                        startActivity(intent);
+
+                        //启动提示页面
+                        Intent intent1 = new Intent(mContext, TipActivity.class);
+                        intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent1);
+
+                        //啟動服務
                         startService(new Intent(TimeService.this, MonitorService.class));
                     }
-
                 }
             }
         };
 
-        mTimer.schedule(task, 0, 500);
+        mTimer.schedule(task, 0, 1000);
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -80,19 +94,14 @@ public class TimeService extends Service {
 
         UsageStatsManager mUsageStatsManager = (UsageStatsManager) getSystemService(Context.USAGE_STATS_SERVICE);
         List<UsageStats> usageStatsList = mUsageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
-
+        useTime=0;
         if (usageStatsList != null && !usageStatsList.isEmpty()) {
-            //HashSet<String> set = new HashSet<>();
             for (UsageStats usageStats : usageStatsList) {
-                //set.add(usageStats.getPackageName());
                 try {
                     useTime+= usageStats.getTotalTimeInForeground();//加總今日使用時間
                 } catch (Exception e) {}
             }
-
-
         }
-
     }
 
     private boolean isServiceRunning(Context context, String serviceName) {
